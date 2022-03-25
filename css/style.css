@@ -1,0 +1,81 @@
+/* body style */
+body{
+    margin: 10px 40px;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.logo,nav{
+    display: flex;
+}
+
+.logo,nav{
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+nav{
+    background-image: linear-gradient(rgb(11, 11, 250),rgb(65, 2, 2)) ;
+    border-radius: 5px;
+}
+.tool{
+    font-size: 3em;
+    margin-left: 3rem;
+    color: gold;
+}
+.all-card{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 20px;
+}
+.card{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.card h1,.card h2{
+    text-align: center;
+}
+
+.card,.card h2 a{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card h2 a{
+    text-decoration: none;
+    font-size: large;
+    background: blue;
+    color: white;
+}
+.card h2 a:hover{
+    background: rgb(1, 1, 146);
+}
+
+
+/* Responsive */
+@supports (display: grid) {
+    
+    .all-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 15px;
+    }
+}
+
+@media(max-width:1024px){
+    .tool{
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:500px){
+    .tool{
+        font-size: 1.5rem;
+    }
+}
